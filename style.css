@@ -1,9 +1,18 @@
+::selection {
+	background: rgba(0, 0, 0, 0.1);
+}
+
+/** {
+  transition: all 0.5s ease;
+}*/
+
 body {
   /* starting color: red */
   background: #FF5959;
   font-family: "Proxima Nova Soft", "Varela Round", sans-serif;
   margin: 4em 15%;
   -webkit-animation: colourchange 45s infinite;
+  overflow: hidden;
 }
 
 @-webkit-keyframes colourchange {
@@ -25,7 +34,7 @@ body {
 }
 
 #logo {
-  margin-bottom: 6em;
+  margin-bottom: 10%;
 }
 
 h1, h2, h3 {
@@ -48,6 +57,39 @@ h2, h3 {
 h2 {
   margin-bottom: 3em;
   line-height: 1.25em;
+  /*max-width: 14em;*/
+}
+
+img.device {
+  position: absolute;
+  pointer-events: none;
+}
+
+img#heroDevice {
+  width: 290px;
+  transform: rotate(-8deg);
+
+  top: 4.3em;
+  right: 24%;
+  z-index: 1;
+}
+
+img#leftDevice {
+  width: 280px;
+  transform: rotate(12deg);
+
+  bottom: -360px;
+  left: -100px;
+  z-index: 1;
+}
+
+img#rightDevice {
+  width: 280px;
+  transform: rotate(-24deg);
+
+  top: -150px;
+  right: -200px;
+  z-index: 1;
 }
 
 img.store {
@@ -64,12 +106,66 @@ footer {
   background-color: rgba(0, 0, 0, 0.16);
   padding: 2em 0;
   text-align: center;
-  position:fixed;
-  left:0px;
-  bottom:0px;
+
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
   width: 100%;
 }
 
 footer:hover {
   background-color: rgba(0, 0, 0, 0.32);
+}
+
+
+/*media queries*/
+
+@media screen and (max-width: 736px)  {
+  img#leftDevice {
+    display: none;
+	}
+
+  /*re-arrange the remaining devices*/
+  img#heroDevice, img#rightDevice {
+    transform: rotate(0);
+    /*position: static;*/
+    z-index: 0;
+    display: none;
+  }
+
+  img#heroDevice {
+    width: 12em;
+  }
+
+  img#rightDevice {
+    width: 16em;
+  }
+}
+
+@media screen and (max-width: 400px)  {
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2, h3 {
+    font-size: 1em;
+  }
+
+  img.store {
+    margin: 0 auto;
+    width: 70%;
+    transition: all 0.3s ease;
+  }
+
+  footer {
+    position: static;
+    /*margin: 0;
+    padding: 5em 0;*/
+  }
 }
