@@ -1,9 +1,9 @@
 ::selection {
 	background: rgba(0, 0, 0, 0.1);
 }
-/*
-a {
-  text-decoration: none;
+
+/** {
+  transition: all 0.5s ease;
 }*/
 
 body {
@@ -62,7 +62,7 @@ h2 {
 
 img.device {
   position: absolute;
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 img#heroDevice {
@@ -142,12 +142,11 @@ footer:hover {
   }
 }
 
-@media screen and (max-width: 400px), screen and (max-height: 510px) {
+@media screen and (max-height: 510px) {
   body {
-    /*width: 100%;
+    width: 100%;
     margin: 0;
-    padding: 0;*/
-    overflow: visible;
+    padding: 0;
   }
 
   h1 {
@@ -158,15 +157,15 @@ footer:hover {
     font-size: 1em;
   }
 
-  /*img.store {
+  img.store {
     margin: 0 auto;
     width: 70%;
     transition: all 0.3s ease;
-  }*/
+  }
 
   footer {
     position: static;
-    margin-top: 10em;
+    margin: 0;
     padding: 5em 0;
   }
 }
