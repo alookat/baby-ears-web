@@ -1,18 +1,27 @@
 body {
   /* starting color: red */
-  /*background: #FF5959; */
+  background: #FF5959;
   font-family: "Proxima Nova Soft", "Varela Round", sans-serif;
   margin: 4em 15%;
-  -webkit-animation: colourchange 10s infinite;
+  -webkit-animation: colourchange 45s infinite;
 }
 
 @-webkit-keyframes colourchange {
-  0% {background: #FF5959;} /* red */
-  15% {background: #DD5ED7;} /* purple */
-  30% {background: #308CF8;} /* blue */
-  45% {background: #4CD764;} /* green */
-  60% {background: #FFB028;} /* yellow */
-  100% {background: #FF5959;} /* red */
+  15% {background: #FF5959;} /* red: end */
+
+  25% {background: #DD5ED7;} /* purple: start */
+  35% {background: #DD5ED7;} /* purple: end */
+
+  45% {background: #308CF8;} /* blue: start */
+  55% {background: #308CF8;} /* blue: end */
+
+  60% {background: #4CD764;} /* green: start */
+  75% {background: #4CD764;} /* green: end */
+
+  85% {background: #FFB028;} /* yellow: start*/
+  90% {background: #FFB028;} /* yellow: end */
+
+  100% {background: #FF5959;} /* red: start */
 }
 
 #logo {
