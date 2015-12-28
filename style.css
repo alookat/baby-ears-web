@@ -1,0 +1,55 @@
+body {
+  background: #FF5959;
+  font-family: "Proxima Nova Soft", "Varela Round", sans-serif;
+  margin: 5% 15% 10%;
+}
+
+#logo {
+  margin-bottom: 6em;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  margin-bottom: 0.25em;
+}
+
+h2, h3 {
+  font-size: 1.25em;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+
+h2 {
+  margin-bottom: 3em;
+  line-height: 1.25em;
+}
+
+img.store {
+  margin-right: 1em;
+  transition: all 0.3s ease;
+}
+  img.store:hover {
+    box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
+  }
+
+footer {
+  transition: background-color 0.25s ease;
+  background-color: rgba(0, 0, 0, 0.16);
+  padding: 2em 0;
+  text-align: center;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width: 100%;
+}
+
+footer:hover {
+  background-color: rgba(0, 0, 0, 0.32);
+}
