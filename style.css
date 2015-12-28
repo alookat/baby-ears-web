@@ -158,7 +158,7 @@ footer:hover {
 
   #logo {
     max-width: 60%;
-    margin: 3em 0 2em 0;
+    margin: 2em 0 1.2em 0;
   }
 
   #content {
@@ -187,5 +187,11 @@ footer:hover {
 
   h2, h3 {
     font-size: 1em;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #preview {
+    display: none;
   }
 }
