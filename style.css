@@ -1,18 +1,9 @@
-::selection {
-	background: rgba(0, 0, 0, 0.1);
-}
-
-/** {
-  transition: all 0.5s ease;
-}*/
-
 body {
   /* starting color: red */
   background: #FF5959;
   font-family: "Proxima Nova Soft", "Varela Round", sans-serif;
   margin: 4em 15%;
   -webkit-animation: colourchange 45s infinite;
-  overflow: hidden;
 }
 
 @-webkit-keyframes colourchange {
@@ -34,7 +25,7 @@ body {
 }
 
 #logo {
-  margin-bottom: 10%;
+  margin-bottom: 6em;
 }
 
 h1, h2, h3 {
@@ -57,6 +48,7 @@ h2, h3 {
 h2 {
   margin-bottom: 3em;
   line-height: 1.25em;
+<<<<<<< HEAD
   /*max-width: 14em;*/
 }
 
@@ -90,6 +82,8 @@ img#rightDevice {
   top: -150px;
   right: -200px;
   z-index: 1;
+=======
+>>>>>>> parent of 9154380... Images
 }
 
 img.store {
@@ -106,16 +100,16 @@ footer {
   background-color: rgba(0, 0, 0, 0.16);
   padding: 2em 0;
   text-align: center;
-
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
+  position:fixed;
+  left:0px;
+  bottom:0px;
   width: 100%;
 }
 
 footer:hover {
   background-color: rgba(0, 0, 0, 0.32);
 }
+<<<<<<< HEAD
 
 
 /*media queries*/
@@ -169,3 +163,5 @@ footer:hover {
     padding: 5em 0;
   }
 }
+=======
+>>>>>>> parent of 9154380... Images
