@@ -2,21 +2,8 @@
 	background: rgba(0, 0, 0, 0.1);
 }
 
-body {
-  /* starting color: red */
-  background: #FF5959;
-  font-family: "Proxima Nova Soft", "Varela Round", sans-serif;
-  -webkit-animation: colourchange 45s infinite;
-  overflow: hidden;
-}
-
-body img {
-  /*max-width: 100%;*/
-}
-
 #content {
   margin: 0 15%;
-  /*margin: 0;*/
 }
 
 #preview {
@@ -28,6 +15,13 @@ a {
   text-decoration: none;
 }
 
+body {
+  /* starting color: red */
+  background: #FF5959;
+  font-family: "Proxima Nova Soft", "Varela Round", sans-serif;
+  -webkit-animation: colourchange 45s infinite;
+  overflow: hidden;
+}
 
 @-webkit-keyframes colourchange {
   15% {background: #FF5959;} /* red: end */
@@ -49,7 +43,11 @@ a {
 
 #logo {
   /*margin-bottom: 10%;*/
-  margin-bottom: 5em;
+  margin: 5em 0;
+}
+
+#preview {
+  display: none;
 }
 
 h1, h2, h3 {
@@ -144,9 +142,14 @@ footer:hover {
 
 
 /*iPhone 4-5*/
-@media screen and (max-height: 520px), screen and (max-width: 414px)  {
+/*@media screen and (max-height: 520px), screen and (max-width: 768px)  {*/
+@media screen and (orientation: portrait), screen and (max-height: 520px), screen and (max-width: 768px) {
   .device {
     display: none;
+  }
+
+  #preview {
+    display: inline;
   }
 
   body {
