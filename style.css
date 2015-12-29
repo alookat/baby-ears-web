@@ -3,7 +3,7 @@
 }
 
 * {
-  /*transition: all 0.3s ease;*/
+  transition: all 0.3s ease;
 }
 
 /*any part of the body content that needs side margins*/
@@ -46,8 +46,14 @@ body {
   100% {background: #FF5959;} /* red: start */
 }
 
-#logo {
+img[src="baby-ears-logo.svg"] {
   margin: 5em 0;
+}
+
+img[src="preview.png"] {
+  margin: 0 auto;
+  width: 100%;
+  display: none;
 }
 /* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*clear out all margins*/
@@ -82,7 +88,7 @@ h2 {
 }
 
 /*the main device shown next to copy*/
-#heroDevice {
+img[src="device-hero.png"] {
   /*transform*/
   width: 290px;
   transform: rotate(-8deg);
@@ -92,7 +98,7 @@ h2 {
   z-index: 1;
 }
 
-/*the video overlay (similar styling to #heroDevice underneath)*/
+/*the video overlay (similar styling to img[src="device-hero.png"] underneath)*/
 video {
   width: 290px;
   /*transform to match, bit of guess-work*/
@@ -103,7 +109,7 @@ video {
   z-index: 1;
 }
 
-#leftDevice {
+img[src="device-left.png"] {
   width: 280px;
   transform: rotate(12deg);
 
@@ -112,7 +118,7 @@ video {
   z-index: 1;
 }
 
-#rightDevice {
+img[src="device-right.png"] {
   width: 280px;
   transform: rotate(-24deg);
 
@@ -122,11 +128,11 @@ video {
 }
 /* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*both store link buttons*/
-.store {
+img[src$="-store.svg"] {
   margin-right: 1em;
   transition: all 0.3s ease;
 }
-  .store:hover {
+  img[src$="-store.svg"]:hover {
     box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.12);
     transform: scale(1.05);
   }
@@ -154,38 +160,50 @@ footer:hover {
 /*media queries*/
 
 @media screen and (max-width: 1000px) {
-  #heroDevice {
+  img[src="device-hero.png"] {
     left: 60%;
   }
-  #rightDevice {
+  video {
+    left: 59.9%;
+  }
+  img[src="device-right.png"] {
     display: none;
   }
 }
 @media screen and (max-width: 900px) {
-  #heroDevice {
+  img[src="device-hero.png"] {
     left: 65%;
   }
-
-  #leftDevice {
+  video {
+    left: 64.9%;
+  }
+  img[src="device-left.png"] {
     display: none;
   }
 }
 @media screen and (max-height: 695px) {
-  #heroDevice {
+  img[src="device-hero.png"] {
     top: -5%;
     left: 60%;
   }
-  #rightDevice {
+  video {
+    top: -0.79%;
+    left: 59.9%;
+  }
+  img[src="device-right.png"] {
     display: none;
   }
 }
 @media screen and (max-height: 600px) {
-  #heroDevice {
+  img[src="device-hero.png"] {
     top: -5%;
     left: 80%;
   }
-
-  #leftDevice {
+  video {
+    top: 0%;
+    left: 80%;
+  }
+  img[src="device-left.png"] {
     display: none;
   }
 }
@@ -197,7 +215,7 @@ footer:hover {
     display: none;
   }
 
-  #preview {
+  img[src="preview.png"] {
     display: inline;
   }
 
@@ -205,7 +223,7 @@ footer:hover {
     overflow: visible;
   }
 
-  #logo {
+  img[src="baby-ears-logo.svg"] {
     max-width: 60%;
     margin: 2em 0 1.2em 0;
   }
@@ -215,10 +233,10 @@ footer:hover {
     text-align: center;
   }
 
-  .store {
+  img[src$="-store.svg"] {
     min-width: 12em;
     max-width: 90%;
-    margin: 0 auto 1em;
+    margin: 0 0.5em 1.5em;
   }
 
   footer {
@@ -237,7 +255,7 @@ footer:hover {
 }
 
 @media screen and (orientation: landscape) {
-  #preview {
+  img[src="preview.png"] {
     display: none;
   }
 }
