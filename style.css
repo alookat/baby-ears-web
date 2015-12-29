@@ -158,7 +158,6 @@ footer:hover {
 
 /* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*media queries*/
-
 @media screen and (max-width: 1000px) {
   img[src="device-hero.png"] {
     left: 60%;
@@ -254,13 +253,59 @@ footer:hover {
   }
 }
 
+/* extra large sizes: width */
+@media screen and (min-width: 1200px) {
+  img[src="device-right.png"] {
+    right: -11%;
+  }
+  img[src="device-left.png"] {
+    left: -3%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  img[src="device-right.png"] {
+    right: -4%;
+  }
+  img[src="device-left.png"] {
+    left: 3%;
+  }
+}
+/* extra large sizes: height */
+@media screen (orientation: landscape), screen and (min-height: 800px) {
+  img[src="baby-ears-logo.svg"] {
+    margin: 9em 0 5em;
+  }
+
+  img[src="device-right.png"] {
+    top: -18%;
+  }
+  img[src="device-left.png"] {
+    bottom: -28%;
+  }
+}
+@media screen (orientation: landscape), screen and (min-height: 1000px) {
+  img[src="baby-ears-logo.svg"] {
+    margin: 16em 0 5em;
+  }
+  img[src="device-hero.png"] {
+    top: 16%;
+    left: 54%;
+  }
+  video {
+    top: 18.62%;
+    left: 54%;
+  }
+  img[src="device-right.png"] {
+    top: -18%;
+  }
+  img[src="device-left.png"] {
+    bottom: -28%;
+  }
+}
+
+/*re-iterate that the preview needs to go when landscape*/
 @media screen and (orientation: landscape) {
   img[src="preview.png"] {
     display: none;
   }
-}
-
-video {
-  /*transform: scale(1, 0.79);*/
-  /*max-width: 100px;*/
 }
