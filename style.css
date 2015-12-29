@@ -3,30 +3,31 @@
 }
 
 * {
-  transition: all 0.3s ease;
+  /*transition: all 0.3s ease;*/
 }
 
-#content {
+/*any part of the body content that needs side margins*/
+.content {
   margin: 0 15%;
 }
 
-#preview {
-  margin: 0 auto;
-  width: 100%;
-}
-
+/*get rid of underline where it may popup*/
 a {
   text-decoration: none;
 }
-
+/* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 body {
   /* starting color: red */
   background: #FF5959;
+  /*including fall-back Google Font/s*/
   font-family: "Proxima Nova Soft", "Varela Round", sans-serif;
+  /*declare the below animation*/
   -webkit-animation: colourchange 45s infinite;
+  /*!! hide the edges of bleeding-images (changes later)*/
   overflow: hidden;
 }
 
+/*the animation called within body*/
 @-webkit-keyframes colourchange {
   15% {background: #FF5959;} /* red: end */
 
@@ -46,14 +47,10 @@ body {
 }
 
 #logo {
-  /*margin-bottom: 10%;*/
   margin: 5em 0;
 }
-
-#preview {
-  display: none;
-}
-
+/* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*clear out all margins*/
 h1, h2, h3 {
   margin: 0;
 }
@@ -74,27 +71,36 @@ h2, h3 {
 h2 {
   margin-bottom: 3em;
   line-height: 1.25em;
-  /*max-width: 14em;*/
 }
-
+/* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*the device images shown on large displays*/
 .device {
+  /*tied in with the overflow:hidden on body*/
   position: absolute;
+  /*don't allow the user to drag around the images*/
   pointer-events: none;
 }
 
+/*the main device shown next to copy*/
 #heroDevice {
+  /*transform*/
   width: 290px;
   transform: rotate(-8deg);
-
+  /*position*/
   top: 8.5%;
-  /*right: 24%;*/
   left: 54%;
   z-index: 1;
 }
 
+/*the video overlay (similar styling to #heroDevice underneath)*/
 video {
-  transform: scale(1, 0.79);
-  width: 100px;
+  width: 290px;
+  /*transform to match, bit of guess-work*/
+  transform: rotate(-8deg) scale(0.815);
+  /*position to match, bit of guess-work*/
+  top: 12.3%;
+  left: 54%;
+  z-index: 1;
 }
 
 #leftDevice {
@@ -114,7 +120,8 @@ video {
   right: -16%;
   z-index: 1;
 }
-
+/* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*both store link buttons*/
 .store {
   margin-right: 1em;
   transition: all 0.3s ease;
@@ -124,25 +131,28 @@ video {
     transform: scale(1.05);
   }
 
+/* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 footer {
+  /*when hovering (indicate link)*/
   transition: background-color 0.25s ease;
   background-color: rgba(0, 0, 0, 0.16);
   padding: 2em 0;
   text-align: center;
 
+  /*sticky footer settings (changes on smaller layouts)*/
   position: fixed;
   left: 0px;
   bottom: 0px;
   width: 100%;
 }
-
 footer:hover {
   background-color: rgba(0, 0, 0, 0.32);
 }
 
 
-
+/* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*media queries*/
+
 @media screen and (max-width: 1000px) {
   #heroDevice {
     left: 60%;
@@ -200,7 +210,7 @@ footer:hover {
     margin: 2em 0 1.2em 0;
   }
 
-  #content {
+  .content {
     margin: 0 11%;
     text-align: center;
   }
@@ -230,4 +240,9 @@ footer:hover {
   #preview {
     display: none;
   }
+}
+
+video {
+  /*transform: scale(1, 0.79);*/
+  /*max-width: 100px;*/
 }
