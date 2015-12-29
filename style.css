@@ -2,6 +2,10 @@
 	background: rgba(0, 0, 0, 0.1);
 }
 
+* {
+  transition: all 0.3s ease;
+}
+
 #content {
   margin: 0 15%;
 }
@@ -73,43 +77,49 @@ h2 {
   /*max-width: 14em;*/
 }
 
-img.device {
+.device {
   position: absolute;
   pointer-events: none;
 }
 
-img#heroDevice {
+#heroDevice {
   width: 290px;
   transform: rotate(-8deg);
 
-  top: 4.3em;
-  right: 24%;
+  top: 8.5%;
+  /*right: 24%;*/
+  left: 54%;
   z-index: 1;
 }
 
-img#leftDevice {
+video {
+  transform: scale(1, 0.79);
+  width: 100px;
+}
+
+#leftDevice {
   width: 280px;
   transform: rotate(12deg);
 
-  bottom: -360px;
-  left: -100px;
+  bottom: -48%;
+  left: -7%;
   z-index: 1;
 }
 
-img#rightDevice {
+#rightDevice {
   width: 280px;
   transform: rotate(-24deg);
 
-  top: -150px;
-  right: -200px;
+  top: -24%;
+  right: -16%;
   z-index: 1;
 }
 
-img.store {
+.store {
   margin-right: 1em;
   transition: all 0.3s ease;
 }
-  img.store:hover {
+  .store:hover {
     box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.12);
     transform: scale(1.05);
   }
@@ -133,16 +143,45 @@ footer:hover {
 
 
 /*media queries*/
-/*@media screen and (max-width: 375px) {
-  #leftDevice, #heroDevice {
+@media screen and (max-width: 1000px) {
+  #heroDevice {
+    left: 60%;
+  }
+  #rightDevice {
     display: none;
   }
-}*/
+}
+@media screen and (max-width: 900px) {
+  #heroDevice {
+    left: 65%;
+  }
+
+  #leftDevice {
+    display: none;
+  }
+}
+@media screen and (max-height: 695px) {
+  #heroDevice {
+    top: -5%;
+    left: 60%;
+  }
+  #rightDevice {
+    display: none;
+  }
+}
+@media screen and (max-height: 600px) {
+  #heroDevice {
+    top: -5%;
+    left: 80%;
+  }
+
+  #leftDevice {
+    display: none;
+  }
+}
 
 
-
-/*iPhone 4-5*/
-/*@media screen and (max-height: 520px), screen and (max-width: 768px)  {*/
+/* mobile sizes, weird desktop sizes*/
 @media screen and (orientation: portrait), screen and (max-height: 520px), screen and (max-width: 768px) {
   .device {
     display: none;
@@ -166,19 +205,16 @@ footer:hover {
     text-align: center;
   }
 
-  img.store {
+  .store {
     min-width: 12em;
     max-width: 90%;
-    margin: 0 auto 3em;
-  }
-
-  .store[src="android.svg"]{
-    display: none;
+    margin: 0 auto 1em;
   }
 
   footer {
     position: static;
     padding: 3em 0;
+    margin-top: 3em;
   }
 
   h1 {
