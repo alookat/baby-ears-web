@@ -4,7 +4,7 @@ To-do:
 - [ ] Fully responsive website
 - [x] App Store and ~~Play Store~~ 'smart' banners (test this)
 - [x] Absolute aerial imagery
-- [ ] Video loop on hero device
+- [x] Video loop on hero device
 
 Future thoughts:
 ###### More feature-explainers, '[rolling through](http://agelber.com/blog/looping-carousel/)' where the current CTA is
