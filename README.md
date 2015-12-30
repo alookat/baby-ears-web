@@ -1,7 +1,7 @@
 # baby-ears-web
 To-do:
 - [x] Background colour cycle (timed)
-- [ ] Fully responsive website
+- [x] Fully responsive website
 - [x] App Store and ~~Play Store~~ 'smart' banners (test this)
 - [x] Absolute aerial imagery
 - [x] Video loop on hero device
