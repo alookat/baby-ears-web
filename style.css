@@ -1,3 +1,9 @@
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3005f3");
+@font-face {font-family: 'ProximaNovaSoft-Regular';src: url('webfonts/3005F3_0_0.eot');src: url('webfonts/3005F3_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3005F3_0_0.woff2') format('woff2'),url('webfonts/3005F3_0_0.woff') format('woff'),url('webfonts/3005F3_0_0.ttf') format('truetype');}
+
+/* –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 ::selection {
 	background: rgba(0, 0, 0, 0.1);
 }
@@ -22,7 +28,7 @@ body {
   /* starting color: red */
   background: #FF5959;
   /*including fall-back Google Font/s*/
-  font-family: "Proxima Nova Soft", "Varela Round", sans-serif;
+  font-family: ProximaNovaSoft-Regular, "Proxima Nova Soft", "Varela Round", sans-serif;
   /*declare the below animation*/
   -webkit-animation: colourchange 45s infinite;
 }
